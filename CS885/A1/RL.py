@@ -56,7 +56,7 @@ class RL:
         # temporary values to ensure that the code compiles until this
         # function is coded
         avg_cum_rewards = np.zeros(nEpisodes)
-        trials = 1
+        trials = 100
         for trial in range(trials):
             Q = np.copy(initialQ)
             N = np.zeros([self.mdp.nActions, self.mdp.nStates])
@@ -83,12 +83,8 @@ class RL:
                     # print(v2 - v1, alpha)
                     s = s1
                     cum_rewards[episode] += pow(self.mdp.discount, step) * r
-                print(np.max(np.abs(Q - prev_Q)))
+                # print(np.max(np.abs(Q - prev_Q)))
             avg_cum_rewards += cum_rewards
         avg_cum_rewards = avg_cum_rewards / trials
-
-        print(avg_cum_rewards)
         policy = np.argmax(Q, axis=0)
-        print(policy)
-        exit(0)
-        return [Q,policy]    
+        return [Q,policy,avg_cum_rewards]    
