@@ -1,4 +1,4 @@
-from MDP import *
+from A2.MDP import *
 
 ''' Construct simple MDP as described in Lecture 1b Slides 17-18'''
 # Transition function: |A| x |S| x |S'| array

@@ -1,5 +1,5 @@
 import numpy as np
-import MDP
+import A2.MDP as MDP
 import RL
 
 import matplotlib.pyplot as plt
