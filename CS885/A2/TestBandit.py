@@ -25,7 +25,7 @@ discount = 0.999
 mdp = MDP.MDP(T,R,discount)
 banditProblem = RL2.RL2(mdp,sampleBernoulli)
 
-trials = 1000
+trials = 100
 nIterations = 200
 t = np.arange(0, nIterations)
 avg_rewards = np.zeros(nIterations)
