@@ -201,5 +201,7 @@ else:
 env.close()
 
 """
-In comparison between REINFORCE with and without baseline, with baseline gives a faster convergence curve because the 
+In comparison between REINFORCE with and without baseline, with baseline gives a faster convergence curve because the gradient has a baseline which will help guiding the gradient to the right direction.
+For PPO, an approximation of TRPO, which utilize the second derivative which emperically help guiding the step direction by approximate local region with a quadratic function, and use trust region to constrain
+the step size, which improves the efficiency of optimization numerically without zigzagging in local valley, from the curve we can see clearly a much smoother learning curve presented in PPO than the previous two.
 """
